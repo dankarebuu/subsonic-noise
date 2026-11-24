@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #E9E1D4;
+  --color-paper-light: #F3EDE2;
+  --color-ink: #2E2E2E;
+  --color-dirty-yellow: #B5A642;
+  --color-muted-red: #8C2727;
+  --color-olive: #6B8E23;
+  --color-concrete: #7A7A7A;
+  --color-denim: #3B5998;
+  --color-burnt-orange: #A84700;
+
+  --font-display: "Archivo Black", Impact, "Arial Black", sans-serif;
+  --font-mono: "Space Mono", "Courier New", Courier, monospace;
+  --font-marker: "Permanent Marker", "Comic Sans MS", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+  }
+
+  body {
+    background-color: var(--color-paper);
+    background-image:
+      radial-gradient(rgba(46, 46, 46, 0.08) 1px, transparent 0),
+      radial-gradient(rgba(140, 39, 39, 0.04) 1px, transparent 0);
+    background-size: 28px 28px, 43px 43px;
+    background-position: 0 0, 14px 19px;
+    color: var(--color-ink);
+    overflow-x: hidden;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-muted-red);
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Muted red wavy zine underline */
+.zine-squiggle {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #8C2727;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 5px;
+}
+
+/* Translucent duct tape strip */
+.zine-tape {
+  background: linear-gradient(
+    90deg,
+    rgba(176, 172, 162, 0.78) 0%,
+    rgba(196, 192, 182, 0.86) 50%,
+    rgba(168, 164, 154, 0.78) 100%
+  );
+  border-left: 1px dashed rgba(46, 46, 46, 0.25);
+  border-right: 1px dashed rgba(46, 46, 46, 0.25);
+  box-shadow: 0 2px 4px rgba(46, 46, 46, 0.14);
+}
+
+/* Offset zine card / photo frame */
+.zine-offset-red {
+  border: 2px solid #2E2E2E;
+  box-shadow: 6px 6px 0 #8C2727;
+}
+
+.zine-offset-ink {
+  border: 2px solid #2E2E2E;
+  box-shadow: 5px 5px 0 #2E2E2E;
+}
+
+.zine-offset-yellow {
+  border: 2px solid #2E2E2E;
+  box-shadow: 5px 5px 0 #B5A642;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SUBSONIC NOISE">
+  <g transform="rotate(-3 32 32)">
+    <!-- Muted red hard offset shadow -->
+    <rect x="11" y="11" width="47" height="47" fill="#8C2727" />
+    <!-- Primary faded-black ink stamp -->
+    <rect x="6" y="6" width="47" height="47" fill="#2E2E2E" />
+    <!-- "S" in dirty-yellow -->
+    <path
+      d="M12 15H27V21H18V26.5H27V44H12V38H21V32H12Z"
+      fill="#B5A642"
+    />
+    <!-- "N" in paper-light -->
+    <path
+      d="M31 15H36.5L41.5 31V15H47V44H41.5L36.5 28V44H31Z"
+      fill="#F3EDE2"
+    />
+  </g>
+</svg>
